@@ -37,7 +37,7 @@ module Api
       end
 
       def destroy
-        airline = Airline.find_by(slug:)
+        airline = Airline.find_by(:slug)
 
         if airline.destroy
           head :no_content
